@@ -2,8 +2,7 @@
 Leaflet story map of Hartford Public High School locations over time
 
 ## Demo
-
-http://jackdougherty.github.io/otl-hphs/
+http://ontheline.github.io/otl-hphs/
 
 ## See code template and instructions
 
