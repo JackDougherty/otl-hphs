@@ -30,13 +30,13 @@ function initMap() {
   var lightAll = new L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
   }).addTo(map); //this displays layer by default
-  controlLayers.addBaseLayer(lightAll, 'CartoDB LightAll');
+  controlLayers.addBaseLayer(lightAll, 'Streets');
 
   // Esri satellite map from http://leaflet-extras.github.io/leaflet-providers/preview/
   var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
   });
-  controlLayers.addBaseLayer(Esri_WorldImagery, 'Esri Satellite');
+  controlLayers.addBaseLayer(Esri_WorldImagery, 'Satellite');
 
   // tileLayer.WMS as a baselayer - see http://leafletjs.com/reference.html#tilelayer-wms
   // UConn MAGIC WMS settings - see http://geoserver.lib.uconn.edu:8080/geoserver/web/?wicket:bookmarkablePage=:org.geoserver.web.demo.MapPreviewPage
@@ -47,7 +47,7 @@ function initMap() {
     transparent: true,
     attribution: '1934 <a href="http://magic.library.uconn.edu">MAGIC UConn</a> and <a href="http://cslib.org">CSL</a>'
   });
-  controlLayers.addBaseLayer(aerial1934, 'CT Aerial 1934');
+  controlLayers.addBaseLayer(aerial1934, '1934 CT Aerial');
 
   // *GET THE GEOJSON
   $.getJSON('data.geojson', function(data) {
